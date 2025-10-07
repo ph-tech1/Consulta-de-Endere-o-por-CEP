@@ -5,8 +5,16 @@ const campoBairro = document.getElementById('bairro');
 const campoCidade = document.getElementById('cidade');
 const campoEstado = document.getElementById('estado');
 const buscarCep = document.getElementById('btn_consulta');
+const limpar = document.getElementById('btn_limpar');
 
-
+// Função que pega os valores no campo e limpa eles
+function limparCampos(){
+  campoCep.value = " ";
+  campoLogradouro.value = " ";
+  campoBairro.value = " ";
+  campoCidade.value = " ";
+  campoEstado.value = " ";
+}
 
 
 // Função que busca o endereço e preenche os campos.
@@ -42,4 +50,10 @@ async function consultarEndereco(cep) {
 buscarCep.addEventListener('click', () => {
   const cepDigitado = campoCep.value;
   consultarEndereco(cepDigitado);
+});
+
+//quando clicar no botão limpar chamar a funsão para a limpeza dos campos
+limpar.addEventListener('click', () => {
+  limparCampos();
+
 });
