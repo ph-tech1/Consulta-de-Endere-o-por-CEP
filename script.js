@@ -9,11 +9,11 @@ const limpar = document.getElementById('btn_limpar');
 
 // Função que pega os valores no campo e limpa eles
 function limparCampos(){
-  campoCep.value = " ";
-  campoLogradouro.value = " ";
-  campoBairro.value = " ";
-  campoCidade.value = " ";
-  campoEstado.value = " ";
+  campoCep.value = "";
+  campoLogradouro.value = "";
+  campoBairro.value = "";
+  campoCidade.value = "";
+  campoEstado.value = "";
 }
 
 
